@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+small {
+    font-weight: lighter;
+}
+
+@media (max-width : 700px) {
+    #Search{
+        font-size: 12px;
+    }
+
+    thead th, tbody td{
+        font-size: 13px;
+    }
+}
