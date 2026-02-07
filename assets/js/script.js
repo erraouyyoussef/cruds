@@ -12,7 +12,6 @@ let mood = 'AddProduct';
 let temp;
 
 let data;
-
 if (localStorage.getItem('data')) {
     data = JSON.parse(localStorage.getItem('data'));
 } else {
@@ -96,9 +95,14 @@ function ShowData() {
 
 
 function Delete_item(id) {
-    data.splice(id, 1);
-    localStorage.setItem('data', JSON.stringify(data))
-    ShowData()
+    let confirmation = confirm('Are You Sure ?')
+    if (confirmation == true) {
+        data.splice(id, 1);
+        localStorage.setItem('data', JSON.stringify(data))
+        ShowData()
+    }else{
+        ShowData()
+    }
 }
 
 

@@ -9,65 +9,71 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body class="bg-dark">
-        <div class="container mt-4">
-            <h1 class="text-white text-center mb-4">Products Trucker</h1>
-            <form id="form1"
-                class="text-white  mx-auto bg-secondary p-3 rounded-3 ">
-                <div class="row">
-                    <div class="col-md-3 mb-3">
-                        <label for="nameInput" class="form-label">Name</label>
-                        <input class="form-control" type="text" id="nameInput"
-                            name="name" placeholder="Product Name">
+        <section>
+            <div class="container mt-4">
+                <h1 class="text-white text-center mb-4">Products Tracker</h1>
+                <form id="form1"
+                    class="text-white  mx-auto bg-secondary p-3 rounded-3 ">
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="nameInput"
+                                class="form-label">Name</label>
+                            <input class="form-control" type="text"
+                                id="nameInput"
+                                name="name" placeholder="Product Name">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="priceInput"
+                                class="form-label">Price</label>
+                            <input class="form-control" type="number"
+                                id="priceInput"
+                                name="price" placeholder="Product Price">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="quantityInput"
+                                class="form-label">Quantity</label>
+                            <input class="form-control" type="number"
+                                id="quantityInput"
+                                name="quantity" placeholder="Product Quantity">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="dateInput" class="form-label">Expiry
+                                date</label>
+                            <input class="form-control" type="date"
+                                id="dateInput"
+                                name="name" placeholder="Product Date">
+                        </div>
                     </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="priceInput" class="form-label">Price</label>
-                        <input class="form-control" type="number"
-                            id="priceInput"
-                            name="price" placeholder="Product Price">
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-success w-25"
+                            id="AddProduct_btn">Add
+                            Product</button>
                     </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="quantityInput"
-                            class="form-label">Quantity</label>
-                        <input class="form-control" type="number"
-                            id="quantityInput"
-                            name="quantity" placeholder="Product Quantity">
+                </form>
+                <form id="form2">
+                    <div class="input-group mt-3">
+                        <input type="text" class="form-control"
+                            placeholder="Search..." id="searchInput">
+                        <button type="submit" class="btn btn-primary w-25"
+                            id="Search">Search
+                            <small>(by Name)</small></button>
                     </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="dateInput" class="form-label">Expiry
-                            date</label>
-                        <input class="form-control" type="date" id="dateInput"
-                            name="name" placeholder="Product Date">
-                    </div>
-                </div>
-                <div class="text-center mt-3">
-                    <button type="submit" class="btn btn-success w-25"
-                        id="AddProduct_btn">Add
-                        Product</button>
-                </div>
-            </form>
-            <form id="form2">
-                <div class="input-group mt-3">
-                    <input type="text" class="form-control"
-                        placeholder="Search..." id="searchInput">
-                    <button type="submit" class="btn btn-primary w-25" id="Search">Search
-                        <small>(by Name)</small></button>
-                </div>
-            </form>
+                </form>
 
-            <table class="table table-hover mt-3 table-secondary">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Price <small>(dh)</small></th>
-                        <th>Quantity <small>(piece/kg)</small></th>
-                        <th>Expiry Date</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- <tr>
+                <table class="table table-hover mt-3 table-secondary">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Price <small>(dh)</small></th>
+                            <th>Quantity <small>(piece/kg)</small></th>
+                            <th>Expiry Date</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
                         <td>1</td>
                         <td>milk</td>
                         <td>5</td>
@@ -83,13 +89,19 @@
                         </td>
                     </tr> -->
 
-                </tbody>
-            </table>
-            <div id="deletAll">
-                <!-- <button class="btn btn-danger btn-sm w-100" onclick="Delete_All()" >Delete All</button>   -->
-            </div>
+                    </tbody>
+                </table>
+                <div id="deletAll">
+                    <!-- <button class="btn btn-danger btn-sm w-100" onclick="Delete_All()" >Delete All</button>   -->
+                </div>
 
-        </div>
+            </div>
+        </section>
+
+        <footer class="bg-secondary text-white text-center py-5">
+            <p>Design & Development by Youssef</p>
+            <p>© 2026. All rights reserved</p>
+        </footer>
 
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/script.js"></script>

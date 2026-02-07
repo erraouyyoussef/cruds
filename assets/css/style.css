@@ -4,16 +4,39 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+}
+
+body section {
+    height: 100%;
+}
+
 small {
     font-weight: lighter;
 }
 
 @media (max-width : 700px) {
-    #Search{
-        font-size: 12px;
+    #Search {
+        font-size: 10px;
     }
 
-    thead th, tbody td{
+    thead th,
+    tbody td {
         font-size: 13px;
     }
+
+    #AddProduct_btn {
+        font-size: 11px;
+
+    }
+
+}
+
+#AddProduct_btn {
+    box-shadow: 0 0 8px rgb(90, 243, 90);
+}
+
+#AddProduct_btn:hover {
+    box-shadow: 0 0 20px  rgb(90, 243, 90);
 }
