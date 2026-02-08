@@ -11,14 +11,14 @@ let form1 = document.getElementById('form1');
 let mood = 'AddProduct';
 let temp;
 
-let data;
-if (localStorage.getItem('data')) {
-    data = JSON.parse(localStorage.getItem('data'));
-} else {
-    data = [];
-};
+// let data;
+// if (localStorage.getItem('data')) {
+//     data = JSON.parse(localStorage.getItem('data'));
+// } else {
+//     data = [];
+// };
 
-// let data = JSON.parse(localStorage.getItem('data')) || [];
+let data = JSON.parse(localStorage.getItem('data')) || [];
 
 
 form1.addEventListener('submit', function (e) {
@@ -71,6 +71,7 @@ function ShowData() {
         <td>${data[i].price}</td>
         <td>${data[i].quantity}</td>
         <td>${data[i].date}</td>
+        <td>${data[i].price * data[i].quantity}</td>
         <td>
             <button
                 class="btn btn-danger btn-sm w-100" onclick="Delete_item(${i})">Delete</button>
@@ -100,7 +101,7 @@ function Delete_item(id) {
         data.splice(id, 1);
         localStorage.setItem('data', JSON.stringify(data))
         ShowData()
-    }else{
+    } else {
         ShowData()
     }
 }
@@ -163,4 +164,28 @@ function Search() {
     }
 }
 
+
+
+
+function dateTime() {
+    const displayTime = document.getElementById('Time');
+    const displayDate = document.getElementById('Date');
+    const date = new Date();
+
+    hours = date.getHours()
+    minutes = date.getMinutes()
+    secondes = date.getSeconds()
+    displayTime.textContent = `${String(hours).padStart(2, '0')} : ${String(minutes).padStart(2, '0')} : ${String(secondes).padStart(2, '0')}`;
+
+    day = date.getDate();
+    month = date.getMonth() + 1;
+    year = date.getFullYear()
+    displayDate.textContent = `${String(day).padStart(2,'0')} / ${String(month).padStart(2,'0')} / ${year}`
+
+
+}
+setInterval(dateTime, 1000);
+
 ShowData()
+
+
