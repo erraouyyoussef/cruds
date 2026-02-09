@@ -149,6 +149,7 @@ function Search() {
         <td>${data[i].price}</td>
         <td>${data[i].quantity}</td>
         <td>${data[i].date}</td>
+        <td>${data[i].price * data[i].quantity}</td>
         <td>
             <button
                 class="btn btn-danger btn-sm w-100" onclick="Delete_item(${i})">Delete</button>
@@ -163,8 +164,6 @@ function Search() {
 
     }
 }
-
-
 
 
 function dateTime() {
